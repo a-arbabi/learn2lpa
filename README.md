@@ -20,7 +20,7 @@ The preprocessed datasets are stored in the following two subdirectories, corres
 ## Experiments
 Run a cross-validation (`experiment_type=cv`) or temporal (`experiment_type=temporal`) experiment using the following script. Notice that there are two different dataset directories created for cv and temporal experiments.
 ```
-python run_main_experiments.py /path/to/preprocessed_dataset/ppi_hpo_string_"$experiment_type"/ $experiment_type
+python run_main_experiment.py /path/to/preprocessed_dataset/ppi_hpo_string_"$experiment_type"/ $experiment_type
 ```
 
 
