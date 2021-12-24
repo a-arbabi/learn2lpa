@@ -1,17 +1,19 @@
 # Learning to Propagate Labels to Predict Phenotype Associations for Novel Genes
 
 ## Data preparation
-First download the raw data and store in `/path/to/raw_dataset/`:
+The preprocessed data used in our experiments is available in this repository located at `data/preprocessed_data.tar.gz`. You can extract and use this dataset as follows:
 ```
-python data_tools/data_download.py /path/to/raw_dataset/
+mkdir -p /path/to/preprocessed_dataset/
+tar -zxf data/preprocessed_data.tar.gz -C /path/to/preprocessed_dataset/
 ```
 
-Next run the preprocessng script and store the output in `/path/to/preprocessed_dataset/`:
+Alternatively, you can repeat the data preprocssing steps by first downloading the raw data and then running the preprocessing code:
 ```
+python data_tools/data_download.py /path/to/raw_dataset/
 python data_tools/create_datasets.py /path/to/raw_dataset/ /path/to/preprocessed_dataset/ 
 ```
 
-The preprocessed datasets are stored in the following two subdirectories, corresponding to cross-validation and temporal experiments: 
+The preprocessed datasets are stored in two subdirectories, corresponding to cross-validation and temporal experiments: 
 ```
 /path/to/preprocessed_dataset/ppi_hpo_string_cv/
 /path/to/preprocessed_dataset/ppi_hpo_string_temporal/
